@@ -23,6 +23,11 @@
             "type": "string",
             "required": true
           }
+          "topic": {
+            "id": "topic",
+            "type": "string",
+            "required": true
+          }
         },
         "additionalProperties": false
       },
