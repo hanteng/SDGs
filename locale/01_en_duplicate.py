@@ -14,7 +14,7 @@ for x in all:
         
     # Writing JSON data
     with open('en/{}.json'.format(x), 'w', encoding='utf-8') as f:
-        json.dump(data, f)
+        json.dump(data, f, indent="  ", )
 
 for g in data["goals"]:
     print (g["topic"])
