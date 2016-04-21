@@ -94,11 +94,14 @@
     {
       "goal": 16,
       "title": "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels",
+      "short": "Peace and justice - strong institutions",
+      "topic": "Justice"
     },
     {
       "goal": 17,
       "title": "Strengthen the means of implementation and revitalize the global partnership for sustainable development",
       "short": "Partnerships for the goals",
+      "topic": "Global partnership"
     }
   ],
   "source": {
