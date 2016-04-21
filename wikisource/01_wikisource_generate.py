@@ -71,15 +71,20 @@ for i in range(len(data['goals']['goals'])):#range(17):
         ITEMS=ITEMS+ITEM.format( _num = target_item['id'],
                                  _text = target_item['title'])
 
+    # Outputing text in wikipedia syntax
 
-    print (HEADER.format(_previous=_previous, _next=_next)+
-           HEADING.format(_num = data['goals']['goals'][i]['goal'],
-                          _topic = data['goals']['goals'][i]['topic'],
-                          _short = data['goals']['goals'][i]['short'],
-                          _text = data['goals']['goals'][i]['title']).strip()+
-           ITEMS+
-           FOOTER)
 
+    output_text = HEADER.format (_previous=_previous, _next=_next) + \
+                  HEADING.format(_num = data['goals']['goals'][i]['goal'], 
+                                 _topic = data['goals']['goals'][i]['topic'], 
+                                 _short = data['goals']['goals'][i]['short'], 
+                                 _text = data['goals']['goals'][i]['title']  ).strip()  + ITEMS + FOOTER
+
+    #print output_text
+
+    _to_lang=_from_lang    
+    with open('wiki_source_{}_{}.txt'.format(i+1, _to_lang), 'w', encoding='utf-8') as f:
+        f.write(output_text)
 
 
 '''
@@ -88,4 +93,3 @@ for i in range(len(data['goals']['goals'])):#range(17):
         json.dump(data, f)
 '''
     
-
